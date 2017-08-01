@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="com.enterprise.hibernate.mapping.Person" table="person_class">
+			<id name="ssn"></id>
+			<property name="name"></property>
+			<property name="email"></property>
+			
+			<union-subclass name="com.enterprise.hibernate.mapping.Faculty" table="faculty_clas">
+				<property name="department"></property>	
+				<property name="salary"></property>
+			</union-subclass>
+			
+			<union-subclass name="com.enterprise.hibernate.mapping.Student" table="student_class">
+				<property name="coursename"></property>
+				<property name="gpa"></property>
+			</union-subclass>
+			
+	</class> 	
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+Hibernate Inheritance Mapping
+
+Mapping hierarchy classes with the table of the database
+
+Three types:
+1.Table Per Hierarchy
+2.Table Per Concrete classes
+3.Table per Subclass
+
+1.Table Per Hierarchy:
+
+Only one table is required to map the whole hierarchy. 
+Discriminator column is used to identify the class
+
+2.Table Per Concrete classes
+
+One table for each class and duplicate column in subclass
+
+3.Table per Subclass
+
+One table for each class. But , foreign keys are used to relate each table.
